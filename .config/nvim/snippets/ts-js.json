@@ -1,0 +1,12 @@
+{
+  "Print to console": {
+    "prefix": "cl",
+    "body": ["console.log($1)", "$2"],
+    "description": "Log output to console"
+  },
+  "Css module import": {
+    "prefix": "mcss",
+    "body": ["import styles from './$1'"],
+    "description": "snippet for css module"
+  }
+}
