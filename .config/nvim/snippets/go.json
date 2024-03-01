@@ -1,0 +1,7 @@
+{
+  "Error if statement": {
+    "prefix": "ier",
+    "body": ["if err != nil {\n $1 \n}"],
+    "description": "Snippet for if err statment in go."
+  }
+}

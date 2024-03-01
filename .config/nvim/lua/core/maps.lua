@@ -2,7 +2,12 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 keymap.set("n", "x", '"_x')
-
+--DEBUG
+keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+keymap.set("n", "<F1>", ":lua require'dap'.step_over()<CR>")
+keymap.set("n", "<F2>", ":lua require'dap'.step_into()<CR>")
+keymap.set("n", "<F3>", ":lua require'dap'.step_out()<CR>")
+keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -20,8 +25,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<leader>nd", "<cmd>Noice dismiss<CR>")
 
 --Tabs
-vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
-vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
+keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
+keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>")

@@ -16,6 +16,12 @@
           "html"
         ],
         "path": "./html.json"
+      },
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./go.json"
       }
     ]
   }
