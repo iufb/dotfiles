@@ -1,3 +1,17 @@
+local function has_eslint_config(root_dir)
+	local eslint_config_files = {
+		".eslintrc.json",
+		".eslintrc.js",
+		".eslintrc.yaml",
+		".eslintrc.yml",
+	}
+	for _, config_file in ipairs(eslint_config_files) do
+		if vim.loop.fs_stat(root_dir .. "/" .. config_file) then
+			return true
+		end
+	end
+	return false
+end
 return {
 	"jose-elias-alvarez/null-ls.nvim",
 	config = function()
@@ -19,6 +33,14 @@ return {
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.diagnostics.fish,
 				null_ls.builtins.diagnostics.eslint_d.with({
+					condition = function(utils)
+						return utils.root_has_file({
+							".eslintrc.json",
+							".eslintrc.js",
+							".eslintrc.yaml",
+							".eslintrc.yml",
+						})
+					end,
 					diagnostics_format = "[eslint] #{m}\n(#{c})",
 				}),
 			},

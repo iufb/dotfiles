@@ -1,9 +1,16 @@
+local function isRecording()
+	local reg = vim.fn.reg_recording()
+	if reg == "" then
+		return ""
+	end -- not recording
+	return "recording to " .. reg
+end
 return {
 	"nvim-lualine/lualine.nvim",
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "rose-pine",
+			theme = "gruvbox",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 			disabled_filetypes = {},
@@ -17,6 +24,7 @@ return {
 					file_status = true, -- displays file status (readonly status, modified status)
 					path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
 				},
+				{ isRecording },
 			},
 			lualine_x = {
 				{

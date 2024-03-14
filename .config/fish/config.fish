@@ -30,7 +30,14 @@ set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH node_modules/.bin $PATH
 
-# Go
+set -x FLYCTL_INSTALL /home/iufb/.fly
+set -x PATH $FLYCTL_INSTALL/bin:$PATH
+
+#Android 
+set -x ANDROID_HOME $HOME/Android/Sdk
+set -x PATH $PATH $ANDROID_HOME/emulator
+set -x PATH $PATH $ANDROID_HOME/platform-tools
+# Go 
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'

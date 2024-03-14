@@ -2,6 +2,7 @@ function SetColor(color)
 	color = color or "everforest"
 	if color == "everforest" then
 		vim.g.everforest_enable_italic = 1
+		vim.g.everforest_enable_bold = 1
 		vim.g.everforest_cursor = "green"
 		vim.g.everforest_transparent_background = 1
 		vim.g.everforest_float_style = "dim"
@@ -17,4 +18,4 @@ function SetColor(color)
 	-- vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
 end
 
-SetColor("rose-pine")
+SetColor("gruvbox")
