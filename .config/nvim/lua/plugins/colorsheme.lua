@@ -4,8 +4,7 @@ return {
 		"rose-pine/neovim",
 		name = "rose-pine",
 		opts = {
-			dark_variant = "moon",
-
+			disable_background = true,
 			styles = {
 				bold = true,
 				italic = true,

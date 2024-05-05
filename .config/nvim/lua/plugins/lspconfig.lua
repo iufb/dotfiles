@@ -29,6 +29,7 @@ return {
 		lspconfig.tailwindcss.setup({
 			capabilities = capabilities,
 		})
+
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
 		})

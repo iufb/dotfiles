@@ -2,6 +2,7 @@ local function has_eslint_config(root_dir)
 	local eslint_config_files = {
 		".eslintrc.json",
 		".eslintrc.js",
+		".eslintrc.cjs",
 		".eslintrc.yaml",
 		".eslintrc.yml",
 	}
@@ -38,6 +39,7 @@ return {
 							".eslintrc.json",
 							".eslintrc.js",
 							".eslintrc.yaml",
+							".eslintrc.cjs",
 							".eslintrc.yml",
 						})
 					end,

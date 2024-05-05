@@ -3,14 +3,14 @@ local function isRecording()
 	if reg == "" then
 		return ""
 	end -- not recording
-	return "recording to " .. reg
+	return "@rec: " .. reg
 end
 return {
 	"nvim-lualine/lualine.nvim",
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "gruvbox",
+			theme = "rose-pine",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 			disabled_filetypes = {},
