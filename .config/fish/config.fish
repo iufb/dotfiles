@@ -7,6 +7,7 @@ alias ov 'NVIM_APPNAME=own.nvim nvim'
 alias wg 'git remote ; git branch'
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'
+alias i 'sudo pacman -S '
 alias ls "ls -p -G"
 alias zj "zellij"
 alias la "ls -A"
@@ -18,6 +19,11 @@ if type -q exa
     alias ll "exa -l -g --icons"
     alias lla "ll -a"
 end
+set NPM_PACKAGES "/home/iufb/.npm-packages"
+
+set PATH $PATH $NPM_PACKAGES/bin
+
+set MANPATH $NPM_PACKAGES/share/man $MANPATH  
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user yes
@@ -28,6 +34,7 @@ set -gx EDITOR nvim
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH /home/iufb/.cargo/bin $PATH
 set -gx PATH node_modules/.bin $PATH
 
 set -x FLYCTL_INSTALL /home/iufb/.fly
@@ -66,8 +73,4 @@ function mdir
     eval "mkdir $argv[1] ; cd $argv[1]"
 end
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 zoxide init fish | source

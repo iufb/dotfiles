@@ -88,7 +88,7 @@
         "tooltip": "Select an icon to show in the panel.",
         "default_icon": "cinnamon-symbolic",
         "dependency": "menu-custom",
-        "value": "/home/lsteam/.local/share/icons/start-menu-icon/quad-grid.svg"
+        "value": "cinnamon-symbolic"
     },
     "menu-icon-size": {
         "type": "spinbutton",
@@ -99,7 +99,7 @@
         "units": "px",
         "description": "Icon size",
         "dependency": "menu-custom",
-        "value": 24
+        "value": 32
     },
     "menu-label": {
         "type": "entry",
@@ -107,7 +107,7 @@
         "description": "Text",
         "tooltip": "Enter custom text to show in the panel.",
         "dependency": "menu-custom",
-        "value": ""
+        "value": "Menu"
     },
     "show-category-icons": {
         "type": "switch",
@@ -125,7 +125,7 @@
         "units": "px",
         "description": "Categories icon size",
         "dependency": "show-category-icons",
-        "value": 16
+        "value": 22
     },
     "show-application-icons": {
         "type": "switch",
@@ -143,14 +143,14 @@
         "units": "px",
         "description": "Applications icon size",
         "dependency": "show-application-icons",
-        "value": 24
+        "value": 22
     },
     "favbox-show": {
         "type": "switch",
         "default": true,
         "description": "Show favorites and session buttons",
         "tooltip": "Choose whether or not to show the left pane of the menu.",
-        "value": false
+        "value": true
     },
     "fav-icon-size": {
         "type": "spinbutton",
@@ -161,7 +161,7 @@
         "units": "px",
         "description": "Favorites icon size",
         "dependency": "favbox-show",
-        "value": 24
+        "value": 32
     },
     "show-favorites": {
         "type": "switch",
@@ -203,7 +203,7 @@
         "default": false,
         "description": "Enable filesystem path entry in search box",
         "tooltip": "Allows path entry in the menu search box.",
-        "value": true
+        "value": false
     },
     "force-show-panel": {
         "type": "switch",
@@ -236,7 +236,7 @@
         "default": false,
         "description": "Use menu animations",
         "tooltip": "Allow the menu to animate on open and close",
-        "value": true
+        "value": false
     },
     "menu-editor-button": {
         "type": "button",
@@ -252,7 +252,7 @@
     "popup-height": {
         "type": "generic",
         "default": 515,
-        "value": 443
+        "value": 515
     },
     "reset-menu-size-button": {
         "type": "button",

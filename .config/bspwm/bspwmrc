@@ -3,6 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd & 
 nitrogen --restore  &
 /home/iufb/.config/polybar.old/launch.sh  &
+ulauncher &
 gwe &
 udiskie &
 dunst &
