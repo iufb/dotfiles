@@ -10,7 +10,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "rose-pine",
+			theme = "poimandres",
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 			disabled_filetypes = {},
