@@ -12,7 +12,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "39b5b6f48bde0595ce68007ffce408c5d7ac1f79" },
   "gruvbox.nvim": { "branch": "main", "commit": "7a1b23e4edf73a39642e77508ee6b9cbb8c60f9e" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
-  "lazy.nvim": { "branch": "main", "commit": "d901d2166fef0304e360316e7a04316f11ab62d0" },
+  "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
   "live-server.nvim": { "branch": "main", "commit": "f34ae262bf046981d9e5f7cd4f41a353a9647a22" },
   "lspkind-nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
@@ -32,5 +32,6 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "a7ab9a957b17199183388c6f357d614fcaa508e5" },
   "telescope.nvim": { "branch": "master", "commit": "bfcc7d5c6f12209139f175e6123a7b7de6d9c18a" },
   "template-string.nvim": { "branch": "main", "commit": "419bfb2e4d5f0e6ddd0d4435f85b69da0d88d524" },
+  "tokyonight.nvim": { "branch": "main", "commit": "b0e7c7382a7e8f6456f2a95655983993ffda745e" },
   "typescript-tools.nvim": { "branch": "master", "commit": "5da4d695d66f676eb6ea766b946e86f93baaafe7" }
 }

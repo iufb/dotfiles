@@ -1,6 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
+local function map(m, k, v)
+	keymap.set(m, k, v, { silent = true })
+end
+map("x", "p", "P")
 keymap.set("n", "x", '"_x')
 --DEBUG
 keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
