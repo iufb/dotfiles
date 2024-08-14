@@ -8,5 +8,10 @@
     "prefix": "mcss",
     "body": ["import styles from './$1'"],
     "description": "snippet for css module"
+  },
+  "i18n": {
+    "prefix": "n",
+    "body": ["t('$1')"],
+    "description": "snippet for  next-intl"
   }
 }

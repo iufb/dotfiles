@@ -12,6 +12,12 @@ return {
 			},
 		},
 	},
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
 	{
 		"olivercederborg/poimandres.nvim",
@@ -31,5 +37,13 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
+	},
+	{
+		"0xstepit/flow.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = true,
+		},
 	},
 }

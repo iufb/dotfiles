@@ -1,3 +1,22 @@
+function TemplFormat()
+	if vim.bo.filetype == "templ" then
+		local bufnr = vim.api.nvim_get_current_buf()
+		local filename = vim.api.nvim_buf_get_name(bufnr)
+		local cmd = "templ fmt " .. vim.fn.shellescape(filename)
+
+		vim.fn.jobstart(cmd, {
+			on_exit = function()
+				-- Reload the buffer only if it's still the current buffer
+				if vim.api.nvim_get_current_buf() == bufnr then
+					vim.cmd("e!")
+				end
+			end,
+		})
+	else
+		vim.lsp.buf.format()
+	end
+end
+vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = TemplFormat })
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
@@ -18,7 +37,30 @@ return {
 				vim.keymap.set("n", "<c-k>", vim.diagnostic.goto_prev, { buffer = 0 })
 			end,
 		})
-		lspconfig.html.setup({})
+
+		lspconfig.templ.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
+		lspconfig.tailwindcss.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+			init_options = { userLanguages = { templ = "html" } },
+		})
+
+		lspconfig.html.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "html", "templ" },
+		})
+
+		lspconfig.htmx.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "html", "templ" },
+		})
 		lspconfig.prismals.setup({})
 		lspconfig.cssls.setup({
 			capabilities = capabilities,
@@ -26,10 +68,6 @@ return {
 		lspconfig.astro.setup({
 			capabilities = capabilities,
 		})
-		lspconfig.tailwindcss.setup({
-			capabilities = capabilities,
-		})
-
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
 		})
