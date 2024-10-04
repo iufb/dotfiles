@@ -1,4 +1,4 @@
-import = ["/home/iufb/.config/alacritty/themes/themes/everforest.yaml"]
+import = ["/home/iufb/.config/alacritty/themes/themes/cyberflow.toml"]
 live_config_reload = true
 
 [env]
@@ -8,16 +8,17 @@ TERM = "xterm-256color"
 size = 16
 
 [font.bold]
-family = "FiraCode Nerd Font"
+family = "BlexMonoNerdFont"
 style = "Bold"
 
 [font.italic]
-family = "FiraCode Nerd Font"
+family = "BlexMonoNerdFont"
 style = "italic"
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "BlexMonoNerdFont"
 style = "Regular"
 
 [window]
 opacity = 0.9
+startup_mode = "Maximized"

@@ -16,7 +16,6 @@ function TemplFormat()
 		vim.lsp.buf.format()
 	end
 end
-vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = TemplFormat })
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
@@ -26,6 +25,7 @@ return {
 		vim.keymap.set("n", "<C-k>", vim.diagnostic.goto_prev)
 		vim.keymap.set("n", "<C-j>", vim.diagnostic.goto_next)
 		lspconfig.pyright.setup({})
+		lspconfig.jsonls.setup({})
 		lspconfig.gopls.setup({
 			on_attach = function()
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
@@ -39,25 +39,24 @@ return {
 		})
 
 		lspconfig.templ.setup({
-			on_attach = on_attach,
+			on_attach = function()
+				vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = TemplFormat })
+			end,
 			capabilities = capabilities,
 		})
 
 		lspconfig.tailwindcss.setup({
-			on_attach = on_attach,
 			capabilities = capabilities,
-			filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+			filetypes = { "templ", "astro", "javascript", "typescript", "react", "typescriptreact", "javascriptreact" },
 			init_options = { userLanguages = { templ = "html" } },
 		})
 
 		lspconfig.html.setup({
-			on_attach = on_attach,
 			capabilities = capabilities,
 			filetypes = { "html", "templ" },
 		})
 
 		lspconfig.htmx.setup({
-			on_attach = on_attach,
 			capabilities = capabilities,
 			filetypes = { "html", "templ" },
 		})

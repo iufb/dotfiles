@@ -19,7 +19,8 @@
       },
       {
         "language": [
-          "go"
+          "go",
+          "templ"
         ],
         "path": "./go.json"
       }

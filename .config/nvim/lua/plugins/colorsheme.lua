@@ -1,6 +1,11 @@
 return {
 	{ "sainnhe/everforest", lazy = false },
 	{
+		"scottmckendry/cyberdream.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		opts = {

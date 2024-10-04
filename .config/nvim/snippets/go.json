@@ -3,5 +3,10 @@
     "prefix": "ier",
     "body": ["if err != nil {\n $1 \n}"],
     "description": "Snippet for if err statment in go."
+  },
+  "handler args": {
+    "prefix": "hdl",
+    "body": ["w http.ResponseWriter, r *http.Request"],
+    "description": "Snippet for http handler args in go."
   }
 }

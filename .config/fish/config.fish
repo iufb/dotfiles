@@ -11,6 +11,7 @@ alias i 'sudo pacman -S '
 alias ls "ls -p -G"
 alias zj "zellij"
 alias la "ls -A"
+alias yy "yazi"
 alias ll "ls -l"
 alias lla "ll -A"
 alias v nvim

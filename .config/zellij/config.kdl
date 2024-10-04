@@ -25,7 +25,7 @@ keybinds {
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        bind "Ctrl P" { SwitchToMode "Normal"; }
+        bind "Space P" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
@@ -257,6 +257,19 @@ plugins {
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
  themes {
+cyberdream {
+        bg "#16181a"
+        fg "#ffffff"
+        black "#7b8496"
+        red "#ff6e5e"
+        green "#5eff6c"
+        yellow "#f1ff5e"
+        blue "#5ea1ff"
+        magenta "#ff5ef1"
+        cyan "#5ef1ff"
+        white "#ffffff"
+        orange "#ffbd5e"
+    }
      dracula {
          fg 248 248 242
          bg 40 42 54
@@ -302,7 +315,7 @@ plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
- theme "rose-pine-moon"
+ theme "cyberdream"
 
 // The name of the default layout to load on startup
 // Default: "default"

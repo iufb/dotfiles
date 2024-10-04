@@ -5,7 +5,12 @@ local function map(m, k, v)
 	keymap.set(m, k, v, { silent = true })
 end
 map("x", "p", "P")
+-- run shell command
+keymap.set("n", "<leader>s", ":!")
 keymap.set("n", "x", '"_x')
+keymap.set("n", "j", "gj", { noremap = true, silent = true })
+keymap.set("n", "k", "gk", { noremap = true, silent = true })
+
 --DEBUG
 keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
 keymap.set("n", "<F1>", ":lua require'dap'.step_over()<CR>")

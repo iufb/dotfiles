@@ -62,11 +62,12 @@ return {
 		vim.keymap.set("n", "\\\\", function()
 			builtin.buffers()
 		end)
-		vim.keymap.set(
-			"n",
-			"/",
-			"<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>"
-		)
+		-- fuzzy finder with telescope
+		-- vim.keymap.set(
+		-- 	"n",
+		-- 	"/",
+		-- 	"<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<CR>"
+		-- )
 		vim.keymap.set("n", ";t", function()
 			builtin.help_tags()
 		end)

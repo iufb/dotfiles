@@ -29,7 +29,10 @@ return {
 		end
 		null_ls.setup({
 			sources = {
-				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.prettierd.with({
+					filetypes = { "javascriptreact", "typescriptreact", "javascript", "typescript", "css", "html" },
+				}),
+				null_ls.builtins.formatting.fixjson,
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.diagnostics.fish,
