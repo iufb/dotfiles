@@ -1,4 +1,10 @@
 return {
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	{ "sainnhe/everforest", lazy = false },
 	{
 		"scottmckendry/cyberdream.nvim",
@@ -36,12 +42,6 @@ return {
 				-- for configuration options
 			})
 		end,
-	},
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
 	},
 	{
 		"0xstepit/flow.nvim",

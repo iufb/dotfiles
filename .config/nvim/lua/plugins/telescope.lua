@@ -56,6 +56,12 @@ return {
 				hidden = true,
 			})
 		end)
+		-- get telescope with last search terms
+		vim.keymap.set("n", "<leader>ls", builtin.resume, {
+			noremap = true,
+			silent = true,
+			desc = "Resume",
+		})
 		vim.keymap.set("n", ";r", function()
 			builtin.live_grep()
 		end)

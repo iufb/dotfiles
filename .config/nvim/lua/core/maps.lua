@@ -10,7 +10,8 @@ keymap.set("n", "<leader>s", ":!")
 keymap.set("n", "x", '"_x')
 keymap.set("n", "j", "gj", { noremap = true, silent = true })
 keymap.set("n", "k", "gk", { noremap = true, silent = true })
-
+--zen mode
+keymap.set("n", "<leader>z", ":ZenMode<Return>")
 --DEBUG
 keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
 keymap.set("n", "<F1>", ":lua require'dap'.step_over()<CR>")
