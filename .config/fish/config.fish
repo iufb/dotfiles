@@ -16,6 +16,15 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias v nvim
 alias tx tmux
+# Git add/commit 
+function ga
+    if test (count $argv) -eq 0
+        git add . ; git commit
+    else 
+        git add  $argv ; git commit
+    end
+end
+
 if type -q exa
     alias ll "exa -l -g --icons"
     alias lla "ll -a"

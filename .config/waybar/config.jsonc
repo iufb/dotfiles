@@ -19,7 +19,7 @@
         "power-profiles-daemon",
         "cpu",
         "memory",
-        "temperature",
+        // "temperature",
         "hyprland/language",
         "clock",
             ],

@@ -1,4 +1,13 @@
 return {
+	{ "catppuccin/nvim", name = "catppuccin", opts = {
+		transparent_background = true,
+	}, priority = 1000 },
+	{
+		"sample-usr/rakis.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,

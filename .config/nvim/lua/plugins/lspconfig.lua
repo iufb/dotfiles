@@ -65,7 +65,8 @@ return {
 			capabilities = capabilities,
 		})
 		lspconfig.astro.setup({
-			capabilities = capabilities,
+			cmd = { "astro-ls", "--stdio" },
+			filetypes = { "astro" },
 		})
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
