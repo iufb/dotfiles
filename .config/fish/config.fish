@@ -3,7 +3,7 @@ alias bd 'yarn start:dev'
 alias ! 'history -1'
 alias kn 'killall eslint_d prettierd node'
 alias fd 'yarn dev'
-alias ov 'NVIM_APPNAME=own.nvim nvim'
+alias ncn 'NVIM_APPNAME=ncn nvim'
 alias wg 'git remote ; git branch'
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'

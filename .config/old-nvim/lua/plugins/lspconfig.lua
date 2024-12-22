@@ -16,6 +16,7 @@ function TemplFormat()
 		vim.lsp.buf.format()
 	end
 end
+
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
