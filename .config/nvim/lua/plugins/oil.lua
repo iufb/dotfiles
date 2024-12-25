@@ -9,6 +9,7 @@ return {
             oil.setup {
                 default_file_explorer = true,
                 skip_confirm_for_simple_edits = true,
+                columns = {}
             }
             vim.keymap.set('n', "sf", function()
                 local prev_win = vim.api.nvim_get_current_win()
@@ -23,7 +24,9 @@ return {
             vim.keymap.set('n', '<Esc>', function()
                 if vim.bo.filetype == 'oil' then
                     local win = vim.api.nvim_get_current_win()
-                    vim.api.nvim_win_close(win, false)
+                    if vim.api.nvim_get_mode().mode == 'n' then
+                        vim.api.nvim_win_close(win, false)
+                    end
                 end
             end)
         end

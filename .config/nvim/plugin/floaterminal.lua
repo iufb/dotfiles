@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 keymap.set('t', '<esc><esc>', '<c-\\><c-n>')
-keymap.set({ 'n', 't' }, 'tt', '<cmd>Floaterminal<CR>')
+keymap.set({ 'n', 't' }, '<leader>t', '<cmd>Floaterminal<CR>')
 local state = {
     floating = {
         buf = -1,

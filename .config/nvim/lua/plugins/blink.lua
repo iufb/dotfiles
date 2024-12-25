@@ -19,13 +19,12 @@ return {
                     auto_show               = true,
                     auto_show_delay_ms      = 150,
                     treesitter_highlighting = false
-                }
+                },
             },
             keymap = {
-                preset = 'default',
-                ['<C-y>'] = {},
-
-                ['<C-;>'] = { 'accept' },
+                preset = 'enter',
+                cmdline = {
+                    preset = 'default' }
             },
             snippets = {
                 expand = function(snippet) require('luasnip').lsp_expand(snippet) end,

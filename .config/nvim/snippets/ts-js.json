@@ -19,5 +19,12 @@
             "t('$1')"
         ],
         "description": "snippet for  next-intl"
+    },
+    "RN style": {
+        "prefix": "nst",
+        "body": [
+            "style={[$1]}"
+        ],
+        "description": "snippet for RN styles"
     }
 }
