@@ -7,7 +7,7 @@ alias ncn 'NVIM_APPNAME=ncn nvim'
 alias wg 'git remote ; git branch'
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'
-alias i 'sudo pacman -S '
+alias i 'sudo apt install '
 alias ls "ls -p -G"
 alias zj "zellij"
 alias la "ls -A"
@@ -84,3 +84,4 @@ function mdir
 end
 
 zoxide init fish | source
+nvm use 22 > /dev/null
