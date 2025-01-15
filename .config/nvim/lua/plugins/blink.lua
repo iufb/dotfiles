@@ -16,7 +16,9 @@ return {
         opts = {
             completion = {
                 list = {
-                    selection = 'manual',
+                    selection = {
+                        auto_insert = true
+                    },
                 },
                 documentation = {
                     auto_show               = true,
