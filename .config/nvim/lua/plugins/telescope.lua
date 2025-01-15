@@ -9,7 +9,8 @@ return {
         telescope.setup {
             pickers = {
                 find_files = {
-                    theme = 'ivy'
+                    theme = 'ivy',
+                    hidden = true
                 },
                 live_grep = {
                     theme = 'dropdown'
