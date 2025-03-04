@@ -15,11 +15,11 @@ layout {
 
                 hide_frame_for_single_pane "true"
 
-                mode_normal  "#[bg=blue] "
-                mode_tmux    "#[bg=#ffc387] "
+                mode_normal  "#[bg=blue]"
+                mode_tmux    "#[bg=#ffc387]"
 
-                tab_normal   "#[fg=#6C7086] {name} "
-                tab_active   "#[fg=#9399B2,bold,italic] {name} "
+                tab_normal   "#[fg=#9399B2]  {name}  "
+                tab_active   "#[fg=#fff,bold,italic,bg=#B68503]  {name}  "
 
                 command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
                 command_git_branch_format      "#[fg=blue] {stdout} "
