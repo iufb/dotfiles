@@ -1,3 +1,6 @@
+simplified_ui true
+no_status_bar true
+pane_frames false
 keybinds clear-defaults=true {
     normal {}
     locked {
