@@ -1,6 +1,6 @@
 -- vim.opt.termguicolors = true
 vim.wo.number = true
-vim.wo.relativenumber =true
+vim.wo.relativenumber = true
 vim.g.did_load_filetypes = 1
 vim.g.formatoptions = "qrn1"
 vim.opt.showmode = false
@@ -14,8 +14,8 @@ vim.opt.undofile = true
 vim.opt.shell = "/bin/fish"
 
 -- Mouse
-vim.opt.mouse = "a"
-vim.opt.mousefocus = true
+vim.opt.mouse = ""
+vim.opt.mousefocus = false
 
 -- Line Numbers
 vim.opt.number = true
@@ -40,14 +40,14 @@ vim.opt.smartindent = true
 
 -- Fillchars
 vim.opt.fillchars = {
-	vert = "│",
-	fold = "⠀",
-	eob = " ", -- suppress ~ at EndOfBuffer
-	-- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-	msgsep = "‾",
-	foldopen = "▾",
-	foldsep = "│",
-	foldclose = "▸",
+    vert = "│",
+    fold = "⠀",
+    eob = " ", -- suppress ~ at EndOfBuffer
+    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+    msgsep = "‾",
+    foldopen = "▾",
+    foldsep = "│",
+    foldclose = "▸",
 }
 
 vim.cmd([[highlight clear LineNr]])

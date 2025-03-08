@@ -7,7 +7,7 @@ alias ncn 'NVIM_APPNAME=ncn nvim'
 alias wg 'git remote ; git branch'
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'
-alias i 'sudo apt install '
+alias i 'sudo pacman -S '
 alias ls "ls -p -G"
 alias zj "zellij"
 alias la "ls -A"
@@ -70,11 +70,11 @@ if test -f $LOCAL_CONFIG
     source $LOCAL_CONFIG
 end
 # start X at login
-if status --is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        exec startx
-    end
-end
+#if status --is-login
+#    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+#        exec startx
+#    end
+#end
 function runcpp
     eval "c++ -o $argv[1] $argv[1].cpp ; ./$argv[1]"
 end
@@ -84,4 +84,12 @@ function mdir
 end
 
 zoxide init fish | source
-nvm use 22 > /dev/null
+nvm use latest > /dev/null
+set -gx SDKMAN_DIR "$HOME/.sdkman"
+if not contains "$SDKMAN_DIR/bin" $PATH
+  set -gx PATH "$SDKMAN_DIR/bin" $PATH
+end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

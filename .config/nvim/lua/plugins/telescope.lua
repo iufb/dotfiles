@@ -28,7 +28,7 @@ return {
         keymap.set("n", ';r', builtin.live_grep)
         keymap.set("n", 'grr', builtin.lsp_references)
         keymap.set("n", '<leader>fh', builtin.help_tags)
-        keymap.set("n", '<leader>en', function()
+        keymap.set("n", '<leader>ec', function()
             builtin.find_files {
                 cwd = vim.fn.stdpath("config")
             }
