@@ -11,6 +11,7 @@
     "bindings": {
       "Tab": "pane::ActivateNextItem",
       "Shift-Tab": "pane::ActivatePreviousItem",
+      "Alt-t": "terminal_panel::ToggleFocus",
       "s f": "project_panel::ToggleFocus",
       "d w": ["workspace::SendKeystrokes", "v a w c"],
       "s v": "pane::SplitLeft",
@@ -27,7 +28,10 @@
   {
     "context": "Terminal",
     "bindings": {
-      "Ctrl-`": "workspace::ToggleBottomDock"
+      "Alt-t": "workspace::ToggleBottomDock",
+      "Alt-l": "pane::ActivateNextItem",
+      "Alt-h": "pane::ActivatePreviousItem",
+      "Alt-o": "workspace::NewTerminal"
     }
   }
 ]
