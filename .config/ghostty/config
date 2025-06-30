@@ -1,7 +1,7 @@
 
 font-size = 15
-theme= "tokyonight-storm"
-font-family = "IosevkaTerm NF"
+theme= "Dracula"
+font-family = "JetBrains Mono Nerd Font"
 background-opacity = .95
 fullscreen=false
 

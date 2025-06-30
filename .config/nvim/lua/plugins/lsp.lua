@@ -39,14 +39,16 @@ return {
         formatOnSave()
         local lspconfig = require('lspconfig')
         local capabilities = require('blink.cmp').get_lsp_capabilities()
+
+        local skip_servers = {
+            ts_ls = true
+        }
         for _, language in ipairs(Lsp_servers) do
-            if language == 'ts_ls' then
-                goto continue
+            if not skip_servers[language] then
+                lspconfig[language].setup {
+                    capabilities = capabilities,
+                }
             end
-            lspconfig[language].setup {
-                capabilities = capabilities
-            }
-            ::continue::
         end
     end
 }

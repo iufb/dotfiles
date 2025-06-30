@@ -10,7 +10,10 @@ return {
             pickers = {
                 find_files = {
                     theme = 'ivy',
-                    hidden = true
+                    hidden = true,
+                    file_ignore_patterns = {
+                        "node_modules"
+                    }
                 },
                 live_grep = {
                     theme = 'dropdown'

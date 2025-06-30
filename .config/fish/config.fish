@@ -1,4 +1,5 @@
 set fish_greeting ""
+alias uchange 'sudo update-alternatives --config '
 alias bd 'yarn start:dev'
 alias ! 'history -1'
 alias kn 'killall eslint_d prettierd node'

@@ -10,6 +10,17 @@ return {
                 default_file_explorer = true,
                 skip_confirm_for_simple_edits = true,
             }
+            vim.keymap.set('n', "sd", function()
+                local prev_win = vim.api.nvim_get_current_win()
+                if vim.bo.filetype == 'oil' then
+                    vim.cmd "Oil --float ./"
+                    vim.api.nvim_win_close(prev_win, false)
+                    prev_win = vim.api.nvim_get_current_win()
+                    return
+                end
+                vim.cmd "Oil --float ./"
+            end)
+
             vim.keymap.set('n', "sf", function()
                 local prev_win = vim.api.nvim_get_current_win()
                 if vim.bo.filetype == 'oil' then

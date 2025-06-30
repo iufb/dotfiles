@@ -52,5 +52,33 @@
             "};",
             "const styles = StyleSheet.create({})"
         ]
+    },
+    "NextJS Page": {
+        "prefix": "npage",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export default function $1() {",
+            "  return (",
+            "    <section>",
+            "      $2",
+            "    </section>",
+            "  );",
+            "}"
+        ],
+        "description": "Next.js page component "
+    },
+    " Arrow Func": {
+        "prefix": "rfn",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export const ${TM_FILENAME_BASE} = () => {",
+            "  return (",
+            "      $2",
+            "  );",
+            "};"
+        ],
+        "description": " arrow function and named export"
     }
 }

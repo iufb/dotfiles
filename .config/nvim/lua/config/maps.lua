@@ -4,6 +4,10 @@ local function map(m, k, v)
     keymap.set(m, k, v, { silent = true })
 end
 map("x", "p", "P")
+--harpoon
+
+keymap.set("n", "<Tab>", "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap.set("n", "te", "<cmd>:lua require('harpoon.mark').add_file()<CR>")
 --quickfix
 keymap.set("n", "<leader>cn", "<cmd>cnext<CR>")
 keymap.set("n", "<leader>cp", "<cmd>cprevious<CR>")
@@ -36,14 +40,7 @@ keymap.set("i", "jk", "<Esc>")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
---Tabs
-keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
-keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
 
--- New tab
-keymap.set("n", "te", ":tabedit<Return>")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
