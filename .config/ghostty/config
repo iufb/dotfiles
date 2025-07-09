@@ -1,7 +1,6 @@
 
 font-size = 15
-theme= "Dracula"
-font-family = "JetBrains Mono Nerd Font"
-background-opacity = .95
+theme= "Everforest Dark - Hard"
+font-family = "Iosevka Nerd Font Mono"
 fullscreen=false
 

@@ -11,8 +11,9 @@ return {
                 find_files = {
                     theme = 'ivy',
                     hidden = true,
+                    no_ignore = true,
                     file_ignore_patterns = {
-                        "node_modules"
+                        "node_modules", '.next'
                     }
                 },
                 live_grep = {
@@ -30,6 +31,7 @@ return {
         keymap.set("n", ';f', builtin.find_files)
         keymap.set("n", ';r', builtin.live_grep)
         keymap.set("n", 'grr', builtin.lsp_references)
+        keymap.set("n", ';s', builtin.lsp_document_symbols)
         keymap.set("n", '<leader>fh', builtin.help_tags)
         keymap.set("n", '<leader>ec', function()
             builtin.find_files {

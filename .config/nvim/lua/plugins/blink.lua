@@ -89,6 +89,7 @@ return {
                 default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
                 providers = {
                     copilot = {
+
                         name = "copilot",
                         module = "blink-copilot",
                         score_offset = 100,

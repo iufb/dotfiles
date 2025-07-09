@@ -4,10 +4,14 @@ local function map(m, k, v)
     keymap.set(m, k, v, { silent = true })
 end
 map("x", "p", "P")
+--paste
+keymap.set("n", "gp", '"*p')
 --harpoon
 
 keymap.set("n", "<Tab>", "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<CR>")
 keymap.set("n", "te", "<cmd>:lua require('harpoon.mark').add_file()<CR>")
+keymap.set("n", "zj", "<cmd>:lua require('harpoon.ui').nav_next()<CR>")
+keymap.set("n", "zk", "<cmd>:lua require('harpoon.ui').nav_prev()<CR>")
 --quickfix
 keymap.set("n", "<leader>cn", "<cmd>cnext<CR>")
 keymap.set("n", "<leader>cp", "<cmd>cprevious<CR>")

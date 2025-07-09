@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
         local buf = vim.api.nvim_get_current_buf()
         vim.b[buf].ministatusline_disable = true
 
-        vim.cmd.colorscheme "catppuccin"
+        vim.cmd.colorscheme "everforest"
     end,
 })
 

@@ -4,11 +4,12 @@ alias bd 'yarn start:dev'
 alias ! 'history -1'
 alias kn 'killall eslint_d prettierd node'
 alias fd 'yarn dev'
+alias dr docker
 alias ncn 'NVIM_APPNAME=ncn nvim'
-alias wg 'git remote ; git branch'
+alias g  git
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'
-alias i 'sudo pacman -S '
+alias i 'sudo apt install '
 alias ls "ls -p -G"
 alias zj "zellij"
 alias la "ls -A"
@@ -18,12 +19,24 @@ alias lla "ll -A"
 alias v nvim
 alias tx tmux
 # Git add/commit 
+
 function ga
-    if test (count $argv) -eq 0
-        git add . ; git commit
-    else 
-        git add  $argv ; git commit
+  set files (git status --short | fzf --multi | awk '{print $2}')
+    if test (count $files) -eq 0
+        echo "No files selected."
+        return 1
     end
+
+    git add $files
+
+    echo -n "Commit message: "
+    read --prompt-str "📝 Commit message> " commit_msg
+    if test -z "$commit_msg"
+        echo "Commit message is empty. Aborting."
+        return 1
+    end
+
+    git commit -m "$commit_msg"
 end
 
 if type -q exa
