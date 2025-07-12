@@ -38,10 +38,34 @@ return {
     config = function()
         formatOnSave()
         local lspconfig = require('lspconfig')
+        local config = require('lspconfig.configs')
         local capabilities = require('blink.cmp').get_lsp_capabilities()
+        local root_files = {
+            "tsconfig.base.json",
+            "tsconfig.json",
+            "jsconfig.json",
+            "package.json",
+            ".git"
+        }
+        local paths = vim.fs.find(root_files, { stop = vim.env.HOME })
+        local root_dir = vim.fs.dirname(paths[1])
 
+        if not config.tsgo then
+            config.tsgo = {
+                default_config = {
+                    cmd = { "/home/iufb/Projects/typescript-go/built/local/tsgo", '--lsp', "--stdio" },
+                    root_dir = root_dir,
+                    filetypes = { "javascript",
+                        "javascriptreact",
+                        "typescript",
+                        "typescriptreact"
+                    },
+                },
+            }
+        end
         local skip_servers = {
-            ts_ls = true
+            ts_ls = true,
+            tsgo = true
         }
         for _, language in ipairs(Lsp_servers) do
             if not skip_servers[language] then

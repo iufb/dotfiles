@@ -1,4 +1,4 @@
 Lsp_servers = { "lua_ls", "cssls", "tailwindcss", "html", "jsonls", "yamlls", "bashls", "gopls", "pyright",
-    "kotlin_language_server", "prismals" }
+    "kotlin_language_server", "prismals", 'tsgo' }
 
 Ts_js = { "typescript", "javascript", "typescriptreact", "javascriptreact" }
