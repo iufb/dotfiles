@@ -1,4 +1,4 @@
-import = ["/home/iufb/.config/alacritty/themes/themes/cyberflow.toml"]
+import = ["/home/iufb/.config/alacritty/themes/themes/everfores.yml"]
 live_config_reload = true
 
 [env]
@@ -8,15 +8,15 @@ TERM = "xterm-256color"
 size = 16
 
 [font.bold]
-family = "BlexMonoNerdFont"
+family = "IosevkaNerdFontMono"
 style = "Bold"
 
 [font.italic]
-family = "BlexMonoNerdFont"
+family = "IosevkaNerdFontMono"
 style = "italic"
 
 [font.normal]
-family = "BlexMonoNerdFont"
+family = "IosevkaNerdFontMono"
 style = "Regular"
 
 [window]

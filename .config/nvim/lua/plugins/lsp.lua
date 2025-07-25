@@ -67,7 +67,9 @@ return {
             ts_ls = true,
             tsgo = true
         }
-        for _, language in ipairs(Lsp_servers) do
+        local servers = Lsp_servers
+        table.insert(servers, 'tsgo')
+        for _, language in ipairs(servers) do
             if not skip_servers[language] then
                 lspconfig[language].setup {
                     capabilities = capabilities,

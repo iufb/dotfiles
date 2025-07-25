@@ -5,12 +5,13 @@ alias ! 'history -1'
 alias kn 'killall eslint_d prettierd node'
 alias fd 'yarn dev'
 alias dr docker
+alias t tmux-sessionizer
 alias ncn 'NVIM_APPNAME=ncn nvim'
 alias g  git
 alias wq "wmctrl -r 'Alacritty' -b toggle,fullscreen"
 alias bv 'NVIM_APPNAME=bitter nvim'
 alias i 'sudo apt install '
-alias ls "ls -p -G"
+alias ls "exa -l -a"
 alias zj "zellij"
 alias la "ls -A"
 alias yy "yazi"
@@ -55,6 +56,7 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 set -gx EDITOR nvim
+set -gx TS_SEARCH_PATHS ~/Projects/
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
@@ -98,7 +100,9 @@ function mdir
 end
 
 zoxide init fish | source
+
 nvm use latest > /dev/null
+
 set -gx SDKMAN_DIR "$HOME/.sdkman"
 if not contains "$SDKMAN_DIR/bin" $PATH
   set -gx PATH "$SDKMAN_DIR/bin" $PATH

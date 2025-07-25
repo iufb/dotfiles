@@ -1,0 +1,16 @@
+" clipboard
+set clipboard=unnamedplus
+
+set ideajoin
+
+" Telescope like find files
+:map ;f <Action>(GotoFile)
+:map sf <Action>(ActivateProjectToolWindow)
+:map <C-n> <Action>(NewFile)
+
+" Mappings
+:map dw daw
+:map j <Down>
+:map k <Up>
+:map h <Left>
+:map l <Right>
