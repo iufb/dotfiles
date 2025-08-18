@@ -4,3 +4,8 @@ theme= "Everforest Dark - Hard"
 font-family = "Iosevka Nerd Font Mono"
 fullscreen=false
 
+background-opacity = 0.75
+
+background-blur-radius = 40
+
+

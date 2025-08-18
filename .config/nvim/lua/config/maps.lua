@@ -6,9 +6,13 @@ end
 map("x", "p", "P")
 --paste
 keymap.set("n", "gp", '"*p')
+--codecompanion
+keymap.set('n', '<leader>o', ':CodeCompanionChat Toggle<Return>')
+keymap.set({ 'n', 'v' }, '<leader>i', ':CodeCompanion<Return>')
+
 --harpoon
 
-keymap.set("n", "<Tab>", "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap.set("n", "<leader><Tab>", "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<CR>")
 keymap.set("n", "te", "<cmd>:lua require('harpoon.mark').add_file()<CR>")
 keymap.set("n", "zj", "<cmd>:lua require('harpoon.ui').nav_next()<CR>")
 keymap.set("n", "zk", "<cmd>:lua require('harpoon.ui').nav_prev()<CR>")

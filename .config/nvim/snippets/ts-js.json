@@ -1,4 +1,38 @@
 {
+    "Shadcn UI Dialog": {
+        "prefix": "dialog",
+        "body": [
+            "<Dialog>",
+            "  <DialogTrigger>$1</DialogTrigger>",
+            "  <DialogContent>",
+            "    <DialogHeader>",
+            "      <DialogTitle>$2</DialogTitle>",
+            "      <DialogDescription>",
+            "        $3",
+            "      </DialogDescription>",
+            "    </DialogHeader>",
+            "  </DialogContent>",
+            "</Dialog>"
+        ],
+        "description": "Shadcn UI Dialog component structure"
+    },
+    "Next.js Layout Skeleton": {
+        "prefix": "nlayout",
+        "body": [
+            "import { ReactNode } from 'react';",
+            "",
+            "export default function RootLayout({ children }: { children: ReactNode }) {",
+            "  return (",
+            "    <html lang=\"ru\">",
+            "      <body>",
+            "        {children}",
+            "      </body>",
+            "    </html>",
+            "  );",
+            "}"
+        ],
+        "description": "Minimal Next.js 13+ App Router layout skeleton"
+    },
     "Print to console": {
         "prefix": "cl",
         "body": [
